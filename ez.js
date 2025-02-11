@@ -20,6 +20,18 @@ const EZ = {
         }
     },
 
+    setText: (selector, text) => {
+        let el = EZ.select(selector);
+        if (el) {
+            if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                el.value = text;
+            } else {
+                el.textContent = text;
+            }
+        }
+    },
+
+
     load: (key) => {
         let data = localStorage.getItem(key);
         if (data === null) return null; // Falls kein Wert gespeichert ist

@@ -265,3 +265,7 @@ const EZ = {
         EZ.css(selector, "transform", "translate(-50%, -50%)");
     }
 };
+
+if (typeof globalThis !== "undefined") {
+    globalThis.EZ = EZ;
+}

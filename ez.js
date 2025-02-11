@@ -20,17 +20,6 @@ const EZ = {
         }
     },
 
-    setText: (selector, text) => {
-        let el = EZ.select(selector);
-        if (el) {
-            if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-                el.value = text;
-            } else {
-                el.textContent = text;
-            }
-        }
-    },
-
 
     load: (key) => {
         let data = localStorage.getItem(key);
@@ -46,10 +35,15 @@ const EZ = {
         localStorage.removeItem(key);
     },
 
-
     setText: (selector, text) => {
         let el = EZ.select(selector);
-        if (el) el.textContent = text;
+        if (el) {
+            if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                el.value = text;
+            } else {
+                el.textContent = text;
+            }
+        }
     },
 
     scrollToTop: () => {

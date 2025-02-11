@@ -48,6 +48,11 @@ const EZ = {
         window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
     },
 
+    checked: (selector) => {
+        let el = EZ.select(selector);
+        return el ? el.checked : false;
+    },
+
     copyToClipboard: (text) => {
         navigator.clipboard.writeText(text).then(() => {
             console.log("✅ Text wurde erfolgreich in die Zwischenablage kopiert!");

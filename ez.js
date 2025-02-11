@@ -1,4 +1,3 @@
-/// <reference path="/ez.d.ts" />
 const EZ = {
     select: (selector) => document.querySelector(selector),
     selectAll: (selector) => document.querySelectorAll(selector),

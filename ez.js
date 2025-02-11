@@ -1,3 +1,4 @@
+/// <reference path="https://cdn.jsdelivr.net/gh/leJulxan/ezjs@main/ez.d.ts" />
 const EZ = {
     select: (selector) => document.querySelector(selector),
     selectAll: (selector) => document.querySelectorAll(selector),
